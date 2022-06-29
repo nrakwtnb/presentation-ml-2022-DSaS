@@ -163,7 +163,7 @@ A((Task)) --> B((Task)) --> C((Task)) --> D((Task)) --> A
 
 ここでは、Pythonで構築可能あるいは構築したスクリプト資産を活用できるワークフローエンジンを幾つか挙げてみる。
 
-<v-click>
+<!-- <v-click> -->
 
 <div style="font-size: 11pt;">
 
@@ -176,7 +176,7 @@ A((Task)) --> B((Task)) --> C((Task)) --> D((Task)) --> A
 
 </div>
 
-</v-click>
+<!-- </v-click> -->
 
 <!--
   - Luigi や metaflow などのワークフローライブラリでは、フレームワーク固有のタスククラスを再定義する必要がある。
@@ -216,7 +216,7 @@ A((Task)) --> B((Task)) --> C((Task)) --> D((Task)) --> A
 
 この2つの違い分かりますか？
 
-<v-click>
+<!-- <v-click> -->
 
 多くの場面で、これらを区別せずに同義語として用いられている。実際にこれらの違いを調べてみても、意外に引っかからず、また回答内容が人によってやや異なる。
 本発表（個人的な定義）では、世間的な定義を参考にしつつ、以下の定義を採用する。
@@ -230,7 +230,7 @@ A((Task)) --> B((Task)) --> C((Task)) --> D((Task)) --> A
   + タスク単位としては、保持したいデータ単位で区切っていくのが自然である。
   + また自動化された実行を前提とする。
 
-</v-click>
+<!-- </v-click> -->
 
 ---
 
@@ -377,7 +377,7 @@ Python の関数を、kedroのnode関数でラップしたもの（Nodeクラス
 
 <br><br><br>
 
-<v-click>
+<!-- <v-click> -->
 
 #### 必要な情報は何か？
 - 入力元（依存データ）
@@ -403,7 +403,7 @@ my_node = node(
 )
 ```
 
-</v-click>
+<!-- </v-click> -->
 
 ---
 layout: two-cols
@@ -430,7 +430,7 @@ Nodeクラスを集めて、kedroのpipeline関数でラップしたもの（Pip
 
 <br><br><br>
 
-<v-click>
+<!-- <v-click> -->
 
 #### 必要な情報は何か？
 - 取り込むべきNodeの一覧
@@ -456,7 +456,7 @@ my_pipeline = pipeline(
 )
 ```
 
-</v-click>
+<!-- </v-click> -->
 
 ---
 layout: two-cols
@@ -483,7 +483,7 @@ NodeやPipelineの入出力を、実際のパスやデータの種別などと�
 
 <br><br>
 
-<v-click>
+<!-- <v-click> -->
 
 #### 必要な情報は何か？
 
@@ -516,7 +516,7 @@ from kedro.io import DataCatalog, MemoryDataSet
 data_catalog = DataCatalog({"temporal": MemoryDataSet()})
 ```
 
-</v-click>
+<!-- </v-click> -->
 
 ---
 layout: two-cols
@@ -545,7 +545,7 @@ Runnerの出力は、Pipelineの出力に一致する。
 
 <br><br><br>
 
-<v-click>
+<!-- <v-click> -->
 
 #### 必要な情報は何か？
 
@@ -568,7 +568,7 @@ runner = SequentialRunner()
 output = runner.run(my_pipeline, data_catalog)
 ```
 
-</v-click>
+<!-- </v-click> -->
 
 ---
 
@@ -579,7 +579,7 @@ output = runner.run(my_pipeline, data_catalog)
 どういう手順で1つのワークフローに組み上がっていくか、
 について、具体的なおもちゃの例に沿って見ていく。
 
-<v-click>
+<!-- <v-click> -->
 
 <div class="grid grid-cols-[75%,25%] gap-4"><div>
 
@@ -605,9 +605,9 @@ dorian,2100,3
 
 </div></div>
 
-</v-click>
+<!-- </v-click> -->
 
-<v-click>
+<!-- <v-click> -->
 
 <div class="grid grid-cols-[75%,25%] gap-4"><div>
 
@@ -651,7 +651,7 @@ dorian,2100,3
 
 </div></div>
 
-</v-click>
+<!-- </v-click> -->
 
 <style>
 .tree code {
@@ -667,23 +667,23 @@ dorian,2100,3
 
 ワークフローイメージを以下に描く。
 
-<v-click>
+<!-- <v-click> -->
 
 1. 購入履歴ファイル(purchase_history)を読み込み、税率(tax_rate)を与えて、税込みの金額を算出
 
-</v-click><v-click>
+<!-- </v-click> --><!-- <v-click> -->
 
 2. 算出した金額を税込みファイル(with_tax)に書き出す
 
-</v-click><v-click>
+<!-- </v-click> --><!-- <v-click> -->
 
 3. 税込みファイル(with_tax)を読み込み、合計金額を計算する
 
-</v-click><v-click>
+<!-- </v-click> --><!-- <v-click> -->
 
 4. 算出した合計金額を(文字列として)結果ファイル(total_amount)に書き出す
 
-</v-click>
+<!-- </v-click> -->
 
 ```mermaid {theme: 'default', scale: 0.65}
 graph LR
