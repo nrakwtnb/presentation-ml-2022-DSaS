@@ -1113,7 +1113,7 @@ Webサーバが立ち上がり、対象URLにアクセスすると、以下の�
 
 <div style="display: flex;justify-content: center;">
 
-<img src="DAG_visualization.png" class="w-100" />
+<img src="/DAG_visualization.png" class="w-100" />
 
 </div>
 
@@ -1142,11 +1142,11 @@ Jupyter Notebookの統合機能の1つとして、Jupyter Notebookから必要�
 
 <div style="display: flex;justify-content: center;">
 
-<img src="extraction_from_jupyter.png" class="w-130 h-45" />
+<img src="/extraction_from_jupyter.png" class="w-130 h-45" />
 
 <p style="font-size:100px;">→</p>
 
-<img src="extraction_from_jupyter_no2.png" class="w-60 h-25" />
+<img src="/extraction_from_jupyter_no2.png" class="w-60 h-25" />
 
 </div>
 
